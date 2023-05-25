@@ -13,7 +13,7 @@ import Carousel from "./components/Carousel";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ErrorTest from "./components/ErrorTest";
 
-const Testing = () => <div>TESTING</div>;
+const Testing = () => <div>HOME DUMMY CONTENT</div>;
 
 function App() {
   return (

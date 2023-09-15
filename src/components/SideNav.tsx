@@ -36,7 +36,7 @@ const SideNav = () => {
         </Link>
 
         <Link to="/useEffect" className={useEffect ? "active menu-link" : "menu-link"}>
-          UseEffect Tests
+          UseEffect Aborts
         </Link>
 
         <Link to="/error" className={error ? "active menu-link" : "menu-link"}>

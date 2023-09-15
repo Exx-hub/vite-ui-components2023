@@ -47,26 +47,26 @@ function UseEffect() {
   //     }, []);
 
   //   OPTION #3
-  //     useEffect(() => {
-  //       const cancelToken = axios.CancelToken.source();
+  useEffect(() => {
+    const cancelToken = axios.CancelToken.source();
 
-  //       axios
-  //         .get("https://jsonplaceholder.typicode.com/posts/1", { cancelToken: cancelToken.token })
-  //         .then((res) => {
-  //           console.log("mounted!");
-  //           console.log(res.data);
-  //           alert("posts are fetched!");
-  //         })
-  //         .catch((err) => {
-  //           if (axios.isCancel(err)) {
-  //             console.log("cancelled!");
-  //           }
-  //         });
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts/1", { cancelToken: cancelToken.token })
+      .then((res) => {
+        console.log("mounted!");
+        console.log(res.data);
+        alert("posts are fetched!");
+      })
+      .catch((err) => {
+        if (axios.isCancel(err)) {
+          console.log("cancelled!");
+        }
+      });
 
-  //       return () => {
-  //         cancelToken.cancel();
-  //       };
-  //     }, []);
+    return () => {
+      cancelToken.cancel();
+    };
+  }, []);
   return <div>UseEffect</div>;
 }
 

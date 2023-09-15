@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 function TestingPlayground() {
   const [count, setCount] = useState(0);
 
-  const name = "word";
+  // const name = "word";
   const func = useCallback(() => console.log("function"), []);
 
   const handleIncrement = () => setCount((prev) => prev + 1);

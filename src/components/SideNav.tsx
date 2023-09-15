@@ -5,7 +5,11 @@ const SideNav = () => {
   const holdingMatch = useMatch("/holding");
   const reservationMatch = useMatch("/reservation");
   const carousel = useMatch("/carousel");
+  const playground = useMatch("/playground");
   const error = useMatch("/error");
+  const useEffect = useMatch("/useEffect");
+  const accordion = useMatch("/accordion");
+  const collapsible = useMatch("/collapsible");
 
   return (
     <div className="side-navigation">
@@ -27,8 +31,24 @@ const SideNav = () => {
           Carousel
         </Link>
 
+        <Link to="/playground" className={playground ? "active menu-link" : "menu-link"}>
+          Playground
+        </Link>
+
+        <Link to="/useEffect" className={useEffect ? "active menu-link" : "menu-link"}>
+          UseEffect Tests
+        </Link>
+
         <Link to="/error" className={error ? "active menu-link" : "menu-link"}>
           Error
+        </Link>
+
+        <Link to="/accordion" className={accordion ? "active menu-link" : "menu-link"}>
+          Accordion
+        </Link>
+
+        <Link to="/collapsible" className={collapsible ? "active menu-link" : "menu-link"}>
+          CollapsibleCard
         </Link>
       </div>
     </div>
